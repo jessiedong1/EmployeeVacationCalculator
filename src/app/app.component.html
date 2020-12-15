@@ -1,0 +1,34 @@
+<h1>Employee Vacation Calculator</h1>
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">employee ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Valid work days </th>
+        <th scope="col">Vacation days Left</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let emp of employees" >
+        <tr>
+            <th scope="row">{{ emp.id }}</th>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.workdays }}</td>
+            <td>{{ emp.vacationDays}} </td>
+            <td> 
+              <ul style="list-style: none;">
+               <li style="margin:5px;">
+                <input #days 
+                (keyup.enter)="updateWorkdays(emp.id, days.value)">
+                <button class="btn btn-info btn-sm" (click)="updateWorkdays(emp.id, days.value); days.value=''">Update Work days</button>
+               </li>
+             
+               <li style="margin:5px;">
+                <input #takeoffdays (keyup.enter)="takeVacation(emp.id, takeoffdays.value, emp.vacationDays)">
+                <button class="btn btn-info btn-sm" (click)="takeVacation(emp.id, takeoffdays.value, emp.vacationDays); takeoffdays.value='' ">Take vacation</button>
+               </li>
+              </ul>
+            </td>
+          </tr>
+    </tbody>
+  </table>
