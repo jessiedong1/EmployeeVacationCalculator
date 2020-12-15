@@ -1,5 +1,5 @@
 # Employee Vacation Calculator
-  ![Uploading Screen Shot 2020-12-14 at 10.34.38 PM.png…]()
+ <img width="1792" alt="Screen Shot 2020-12-14 at 10 34 38 PM" src="https://user-images.githubusercontent.com/38058527/102173188-1aa90880-3e60-11eb-85d4-d245e6644272.png">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 
